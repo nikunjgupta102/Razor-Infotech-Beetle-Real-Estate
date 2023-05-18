@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .calcHeading {
+            color: #AA475D;
+            font-size: 1.5em;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'CorporateSLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .calcContainer {
+            position: static;
+            background-color: #EEF1F3;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            margin-left: calc(-1 * ((100vw - 100%) / 2));
+            padding-bottom: 2vw;
+        }
+
+        .calcSub {
+            max-width: 880px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+
+        .calcInput {
+            width: 22%;
+            left: 3%;
+            padding: 8px;
+            margin: 1%;
+            margin-left: 1.5%;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            min-width: 150px;
+            text-align: center;
+        }
+
+
+
+        .calcButton {
+            border: 1px solid #142864;
+            padding: 5px;
+            background: #142864;
+            color: #fff;
+            font: inherit;
+            font-size: 1.2em;
+            display: block;
+            margin: 0 auto;
+            font-family: 'CorporateSLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+        }
+
+        .calcAnswer {
+            color: #AA475D;
+            font-size: 1.0em;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'CorporateSLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        #outMonthly {
+            color: #AA475D;
+            font-size: 1.0em;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'CorporateSLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        @media (max-width: 680px) {
+            .calcInput {
+                width: 30%;
+                margin-left: 35%;
+                margin-right: 35%;
+            }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K4ZGTN8"></script>
+    <script>
+        var BASE_URL = 'https\u003A\u002F\u002Ffsbo.com\u002F';
+        var require = {
+            'baseUrl': 'https\u003A\u002F\u002Ffsbo.com\u002Fstatic\u002Fversion1603986685\u002Ffrontend\u002FInnismaggiore\u002FFsbo\u002Fen_US'
+        };</script>
+    <meta charset="utf-8">
+    <meta name="title" content="FSBO.com |  Real Estate Homes For Sale By Owner Since 1997">
+    <meta name="description"
+        content="FSBO offers the most cost-effective and simplest way of buying and selling homes for sale by owner online since 1997.">
+    <meta name="keywords" content="fsbo, for sale by owner">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Real Estate</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/calendar.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles-m.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="css/styles-l.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700">
+    <link rel="stylesheet" type="text/css" media="all" href="css/fsbo.css">
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript" src="js/mixins.js"></script>
+    <script type="text/javascript" src="js/requirejs-config.js"></script>
+    <link rel="preload" as="font" crossorigin="anonymous"
+        href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/opensans/light/opensans-300.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous"
+        href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/opensans/regular/opensans-400.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous"
+        href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/opensans/semibold/opensans-600.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous"
+        href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/opensans/bold/opensans-700.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous"
+        href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/Luma-Icons.woff2">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K4ZGTN8');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-container="body" data-mage-init="{" loaderAjax": {}, "loader" : { "icon"
+    : "https: fsbo.com static version1603986685 frontend Innismaggiore Fsbo en_US images loader-2.gif" }}"
+    class="cms-home cms-index-index page-layout-home_page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4ZGTN8" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div id="cookie-status" style="display: none;">
+        The store will not work correctly in the case when cookies are disabled.</div>
+    <script type="text/javascript">document.querySelector("#cookie-status").style.display = "none";</script>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "cookieStatus": {}
+        }
+    }
+</script>
+
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".fsbo.com",
+                "secure": false,
+                "lifetime": "3600"
+            }
+        }
+    }
+</script>
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <span>
+                        For the best experience on our site, be sure to turn on Javascript in your browser. </span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+    <script>true</script>
+    <script>
+        require.config({
+            map: {
+                '*': {
+                    wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
+                }
+            }
+        });</script>
+    <script type="text/javascript">require(['bootstrap']);</script>
+    <script type="text/javascript">
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: false
+        }
+    </script>
+    <script type="text/javascript">require(['fontawesome'])</script>
+    <script type="text/javascript">require(['aos'])</script>
+    <div class="page-wrapper">
+        <header class="page-header">
+            <nav class="fixed-top navbar-expand-md navbar-light" style="background-color: black;">
+                <div class="container" style="padding: 0px;">
+
+                    <div class="row mt-5">
+                        <div class="col-2">
+                            <a class="navbar-brand" href="./index.html">
+                                <img class="logo-img" src="" alt="Beetel">
+                            </a>
+                        </div>
+                        <div class="col-8 col-xs-4 d-flex justify-content-center" id="nav" style="font-size: 20px;">
+                            <ul id="links">
+                                <li class="ml-4"><a href="./contact.html">Contact Us</a></li>
+                                <li class="ml-4"><a href="./aboutus.html">About Us</a></li>
+                                <li class="ml-4"><a href="./mortgagecalc.html">Mortgage Calculator</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 col-xs-6" style="float: right; font-size: 15px;"><span
+                                style="color: white;">Phone
+                                Number</span>
+                            <span style="color: white; float: right;">Email
+                                Id
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="mt-5" style="margin-top: 1000px;">
+            <div class="calcContainer mt-5" style="margin-top: 200px;">
+                <div class="calcSub">
+                    <div class="calcHeading">Calculate your Monthly Payment</div>
+                    <div>
+                        <form action="#" name="mortgage_calculator">
+                            <input type="text" class="calcInput" id="inCost" placeholder="Loan Amount (Rs)" />
+
+
+                            <input type="text" class="calcInput" id="inDown" placeholder="Down Payment (Rs)" />
+
+
+                            <input type="text" class="calcInput" id="inInterest" placeholder="Interest (Rs)" />
+
+
+                            <input type="text" class="calcInput" id="inTerm" placeholder="Length of Loan (years)" />
+                    </div>
+                    <p>
+                        <button type="button" class="calcButton" id="btnCalculate">Calculate</button></form>
+                    </p>
+                    <p class="calcAnswer"><b>Total Monthly Payment</b>:
+                        <br />
+                        <br /><span id="outMonthly">Please enter the values above.</span>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="page-footer">
+            <div class="social-icons">
+                <a href="" target="_blank">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fab fa-twitter social-icon"></i>
+                </a>
+            </div>
+            <div class="phone-support">
+                <a href="tel:8006905802">
+                    <strong>Phone Support: 800-690-5802<br>Mon-Fri 9AM-5PM EST</strong>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">Copyright © 1997-2023 FSBO.com. All Rights Reserved</div>
+        </footer>
+    </div>
+    <script>
+        // formula: c = (r * p) / (1 - (Math.pow((1 + r), (-n))))
+        function calculateMortgage(p, r, n) {
+            r = percentToDecimal(r);
+            n = yearsToMonths(n);
+            var pmt = (r * p) / (1 - (Math.pow((1 + r), (-n))));
+            return parseFloat(pmt.toFixed(2));
+        }
+
+        function percentToDecimal(percent) {
+            return (percent / 12) / 100;
+        }
+
+        function yearsToMonths(year) {
+            return year * 12;
+        }
+        var htmlEl = document.getElementById("outMonthly");
+
+        function postPayments(pmt) {
+            htmlEl.innerText = "Rs" + pmt;
+        }
+        var btn = document.getElementById("btnCalculate");
+        btn.onclick = function () {
+            var cost = document.getElementById("inCost").value.replace('$', '');
+            var downPayment = document.getElementById("inDown").value.replace('$', '');
+            var interest = document.getElementById("inInterest").value.replace('%', '');
+            var term = document.getElementById("inTerm").value.replace(' years', '');
+
+            if (cost == "" && downPayment == "" && interest == "" && term == "") {
+                htmlEl.innerText = "Please fill out all fields.";
+                return false;
+            }
+            if (cost < 0 || cost == "" || isNaN(cost)) {
+                htmlEl.innerText = "Please enter a valid loan amount.";
+                return false;
+            }
+            if (downPayment < 0 || downPayment == "" || isNaN(downPayment)) {
+                htmlEl.innerText = "Please enter a valid down payment.";
+                return false;
+            }
+            if (interest < 0 || interest == "" || isNaN(interest)) {
+                htmlEl.innerText = "Please enter a valid interest rate.";
+                return false;
+            }
+            if (term < 0 || term == "" || isNaN(term)) {
+                htmlEl.innerText = "Please enter a valid length of loan.";
+                return false;
+            }
+            var amountBorrowed = cost - downPayment;
+            var pmt = calculateMortgage(amountBorrowed, interest, term);
+            postPayments(pmt);
+        };
+    </script>
+
+</body>
+
+</html>
