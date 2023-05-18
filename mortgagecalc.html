@@ -124,6 +124,9 @@
         href="https://fsbo.com/static/version1603986685/frontend/Innismaggiore/Fsbo/en_US/fonts/Luma-Icons.woff2">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -199,63 +202,79 @@
     <script type="text/javascript">require(['aos'])</script>
     <div class="page-wrapper">
         <header class="page-header">
-            <nav class="fixed-top navbar-expand-md navbar-light" style="background-color: black;">
+            <nav class="fixed-top" style="background-color: #292626;">
                 <div class="container" style="padding: 0px;">
-
                     <div class="row mt-5">
-                        <div class="col-2">
+                        <div class="col-2 col-xs-4 pb-4">
                             <a class="navbar-brand" href="./index.html">
-                                <img class="logo-img" src="" alt="Beetel">
+                                <img class="img-fluid" src="./images/logo.jpg" alt="Beetel" style="height: 60px;">
                             </a>
                         </div>
-                        <div class="col-8 col-xs-4 d-flex justify-content-center" id="nav" style="font-size: 20px;">
+                        <div class="col-7 col-xs-0 col-sm-0 d-flex justify-content-center pt-3" id="nav"
+                            style="font-size: 20px;">
                             <ul id="links">
+                                <li><a href="./index.html">Home</a></li>
                                 <li class="ml-4"><a href="./contact.html">Contact Us</a></li>
                                 <li class="ml-4"><a href="./aboutus.html">About Us</a></li>
                                 <li class="ml-4"><a href="./mortgagecalc.html">Mortgage Calculator</a></li>
                             </ul>
                         </div>
-                        <div class="col-2 col-xs-6" style="float: right; font-size: 15px;"><span
-                                style="color: white;">Phone
-                                Number</span>
-                            <span style="color: white; float: right;">Email
-                                Id
+                        <div class="col-3 col-xs-2 pt-4" style="float: right; font-size: 15px;"><span
+                                style="color: white;"><span><i class="fa-solid fa-mobile"></i></span> 1145034631</span>
+                            <span style="color: white; float: right;"><span style="margin-right: 5px;"><i
+                                        class="fa-solid fa-phone"></i></span>88222212
                             </span>
+                        </div>
+                        <!-- Top Navigation Menu -->
+                        <div class="topnav">
+                            <a href="./index.html" class="active">Home</a>
+                            <!-- Navigation links (hidden by default) -->
+                            <div id="myLinks">
+                                <a href="./mortgagecalc.html">Mortgage Calculator</a>
+                                <a href="./contact.html">Contact</a>
+                                <a href="./aboutus.html">About</a>
+                            </div>
+                            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>>
+                            <i class="fa fa-bars"></i>
+                            </a>
                         </div>
 
                     </div>
                 </div>
             </nav>
         </header>
-        <main class="mt-5" style="margin-top: 1000px;">
-            <div class="calcContainer mt-5" style="margin-top: 200px;">
-                <div class="calcSub">
-                    <div class="calcHeading">Calculate your Monthly Payment</div>
-                    <div>
-                        <form action="#" name="mortgage_calculator">
-                            <input type="text" class="calcInput" id="inCost" placeholder="Loan Amount (Rs)" />
+        <div class="container pt-5">
+            <main class="mt-5 pt-5" style="margin-top: 1000px;">
+                <div class="calcContainer mt-5 container-fluid" style="margin-top: 400px;">
+                    <div class="calcSub">
+                        <div class="calcHeading ">Calculate your Monthly Payment</div>
+                        <div>
+                            <form action="#" name="mortgage_calculator">
+                                <input type="text" class="calcInput" id="inCost" placeholder="Loan Amount (Rs)" />
 
 
-                            <input type="text" class="calcInput" id="inDown" placeholder="Down Payment (Rs)" />
+                                <input type="text" class="calcInput" id="inDown" placeholder="Down Payment (Rs)" />
 
 
-                            <input type="text" class="calcInput" id="inInterest" placeholder="Interest (Rs)" />
+                                <input type="text" class="calcInput" id="inInterest" placeholder="Interest (Rs)" />
 
 
-                            <input type="text" class="calcInput" id="inTerm" placeholder="Length of Loan (years)" />
+                                <input type="text" class="calcInput" id="inTerm" placeholder="Length of Loan (years)" />
+                        </div>
+                        <p>
+                            <button type="button" class="calcButton" id="btnCalculate">Calculate</button></form>
+                        </p>
+                        <p class="calcAnswer"><b>Total Monthly Payment</b>:
+                            <br />
+                            <br /><span id="outMonthly">Please enter the values above.</span>
+                        </p>
                     </div>
-                    <p>
-                        <button type="button" class="calcButton" id="btnCalculate">Calculate</button></form>
-                    </p>
-                    <p class="calcAnswer"><b>Total Monthly Payment</b>:
-                        <br />
-                        <br /><span id="outMonthly">Please enter the values above.</span>
-                    </p>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
-        <footer class="page-footer">
+        <footer class="page-footer" style="margin-top: 100px;">
             <div class="social-icons">
                 <a href="" target="_blank">
                     <i class="fab fa-facebook-f social-icon"></i>
@@ -302,8 +321,8 @@
         }
         var btn = document.getElementById("btnCalculate");
         btn.onclick = function () {
-            var cost = document.getElementById("inCost").value.replace('$', '');
-            var downPayment = document.getElementById("inDown").value.replace('$', '');
+            var cost = document.getElementById("inCost").value.replace('Rs', '');
+            var downPayment = document.getElementById("inDown").value.replace('Rs', '');
             var interest = document.getElementById("inInterest").value.replace('%', '');
             var term = document.getElementById("inTerm").value.replace(' years', '');
 
