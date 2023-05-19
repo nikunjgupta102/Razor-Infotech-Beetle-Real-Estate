@@ -58,6 +58,57 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K4ZGTN8');</script>
     <!-- End Google Tag Manager -->
+    <style>
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: red;
+            color: black;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: white;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: red;
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body data-container="body" data-mage-init="{" loaderAjax": {}, "loader" : { "icon"
@@ -122,49 +173,47 @@
     <script type="text/javascript">require(['fontawesome'])</script>
     <script type="text/javascript">require(['aos'])</script>
     <div class="page-wrapper">
-        <header class="page-header">
-            <nav class="fixed-top" style="background-color: #292626;">
-                <div class="container" style="padding: 0px;">
-                    <div class="row mt-5">
-                        <div class="col-2 col-xs-4 pb-4">
-                            <a class="navbar-brand" href="./index.html">
-                                <img class="img-fluid" src="./images/logo.png" alt="Beetel" style="height: 60px;">
-                            </a>
-                        </div>
-                        <div class="col-7 col-xs-0 col-sm-0 d-flex justify-content-center pt-3" id="nav"
-                            style="font-size: 20px;">
-                            <ul id="links">
-                                <li><a href="./index.html">Home</a></li>
-                                <li class="ml-4"><a href="./contact.html">Contact Us</a></li>
-                                <li class="ml-4"><a href="./aboutus.html">About Us</a></li>
-                                <li class="ml-4"><a href="./mortgagecalc.html">Mortgage Calculator</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-3 col-xs-2 pt-4" style="float: right; font-size: 15px;"><span
-                                style="color: white;"><span><i class="fa-solid fa-mobile"></i></span> 1145034631</span>
-                            <span style="color: white; float: right;"><span style="margin-right: 5px;"><i
-                                        class="fa-solid fa-phone"></i></span>88222212
-                            </span>
-                        </div>
-                        <!-- Top Navigation Menu -->
-                        <div class="topnav">
-                            <a href="./index.html" class="active">Home</a>
-                            <!-- Navigation links (hidden by default) -->
-                            <div id="myLinks">
-                                <a href="./mortgagecalc.html">Mortgage Calculator</a>
-                                <a href="./contact.html">Contact</a>
-                                <a href="./aboutus.html">About</a>
+        <nav class="fixed-top" style="background-color: #292626;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2"><a href="./index.html"><img src="./images/logo.png" style="height: 120px;"
+                                class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center mt-5" style="font-size: 15px;" id="nav">
+                        <ul id="links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li class="ml-2"><a href="./contact.html">Contact Us</a></li>
+                            <li class="ml-2"><a href="./aboutus.html">About Us</a></li>
+                            <li class="ml-2"><a href="./mortgagecalc.html">Mortgage Calculator</a></li>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">More</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a style="color:white" href="./locations/delhi.html">Delhi</a>
+                                    <a style="color:white" href="./locations/gurgaon.html">Gurgaon</a>
+                                    <a style="color:white" href="./locations/noida.html">Noida</a>
+                                </div>
                             </div>
-                            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                            <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>>
-                            <i class="fa fa-bars"></i>
-                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-4 pt-5" style="font-size: 12px; color: white;">
+                        <div class="row">
+                            <div class="col-4 mt-4"><i class="fa-solid fa-phone"></i>
+                                1145034631</div>
+                            <div class="col-3 mt-4"><i class="fa-solid fa-phone"></i></span>88222212
+                                </span></div>
+                            <div class="col-5">627, F/F, Westend
+                                Marg,
+                                Saidulajab,
+                                Butterfly Park, Saiyad
+                                Ul
+                                Ajaib Extension, Sainik
+                                Farm, New Delhi, Delhi 110030</div>
                         </div>
 
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
         <main style="margin-top: 200px;">
             <div class="container">
                 <div class="row">
@@ -196,6 +245,25 @@
             <div class="copyright">Copyright © 1997-2023 FSBO.com. All Rights Reserved</div>
         </footer>
     </div>
+    <script>/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }</script>
 
 </body>
 
