@@ -295,6 +295,10 @@ header.page-header nav.navbar.navbar-light .navbar-brand .logo-img {
   cursor: pointer;
 }
 
+#mortgage-footer {
+  margin-top: 100px;
+}
+
 @media only screen and (max-width: 420px) {
   #nav-md {
     display: none;
@@ -317,6 +321,11 @@ header.page-header nav.navbar.navbar-light .navbar-brand .logo-img {
 
   #contact-main {
     margin-top: 100px;
+  }
+
+  #mortgage-footer {
+    margin-top: 220px;
+    padding-top: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
