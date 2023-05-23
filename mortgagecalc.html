@@ -7,16 +7,23 @@
         .dropbtn {
             background-color: red;
             color: black;
-            padding: 16px;
+            padding: 16px !important;
             font-size: 16px;
             border: none;
             cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 2px 2px 5px gray;
+            height: 100% !important;
         }
 
         /* Dropdown button on hover & focus */
         .dropbtn:hover,
         .dropbtn:focus {
-            background-color: white;
+            /* background-color: #22577A !important; */
+            color: aliceblue;
+            outline: none !important;
+            border: none !important;
+            transition: all .3s linear;
         }
 
         /* The container <div> - needed to position the dropdown content */
@@ -45,12 +52,55 @@
 
         /* Change color of dropdown links on hover */
         .dropdown-content a:hover {
-            background-color: red;
+            background-color: #22577A !important;
         }
 
         /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
         .show {
             display: block;
+        }
+
+        .myMenu {}
+
+        .myMenu>a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .myMenu>div:hover {
+            background-color: #22577A !important;
+            transition: all .3s linear;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);
+        }
+
+        .myMenu>a>div:hover {
+            background-color: #22577A !important;
+            transition: all .3s linear;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);
+        }
+        .myMenu1{
+            display: flex;
+        }
+        @media screen and (max-width:786px){
+            .myMenu>a{
+                margin-bottom: 10px !important;
+                border-radius: 12px;
+                background-color: #22577a93;
+            }
+            .myMenu1{
+            display: none;
+        }
+        .phonenumber{
+            margin: 0 20px;
+            padding: 8px 12px;
+            border-radius: 12px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.341);
+            background-color: rgba(220, 20, 60, 0.685);
+        }
         }
     </style>
     <style>
@@ -218,47 +268,76 @@
     <script type="text/javascript">require(['fontawesome'])</script>
     <script type="text/javascript">require(['aos'])</script>
     <div class="page-wrapper">
-        <nav class="fixed-top" style="background-color: #292626;" id="nav-md">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-2"><a href="./index.html"><img src="./images/logo.png" style="height: 120px;"
-                                class="img-fluid" alt=""></a>
-                    </div>
-                    <div class="col-6 d-flex justify-content-center mt-5" style="font-size: 15px;" id="nav">
-                        <ul id="links">
-                            <li><a style="font-weight:bold;" href="./index.html">Home</a></li>
-                            <li class="ml-2"><a style="font-weight:bold;" href="./contact.html">Contact Us</a></li>
-                            <li class="ml-2"><a style="font-weight:bold;" href="./aboutus.html">About Us</a></li>
-                            <li class="ml-2"><a style="font-weight:bold;" href="./mortgagecalc.html">Mortgage
-                                    Calculator</a></li>
-                            <div class="dropdown">
-                                <button onclick="myFunction()" class="dropbtn">More<i
-                                        class="fa-solid fa-chevron-down"></i></button>
-                                <div id="myDropdown" class="dropdown-content">
-                                    <a style="color:white; text-decoration: none; font-weight:bold;"
-                                        href="./locations/delhi.html">Delhi</a>
-                                    <a style="color:white; text-decoration: none;font-weight:bold;"
-                                        href="./locations/gurgaon.html">Gurgaon</a>
-                                    <a style="color:white;text-decoration: none;font-weight:bold;"
-                                        href="./locations/noida.html">Noida</a>
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="col-4 pt-4" style="font-size: 12px; color: white; font-family:sans-serif;">
-                        <div class="row">
-                            <div class="col-4 mt-5"><i class="fa-solid fa-phone"></i>
-                                1145034631</div>
-                            <div class="col-3 mt-5"><i class="fa-solid fa-phone"></i></span>8822222212
-                                </span></div>
-                            <div class="col-5">627,F/F,Westend Marg,Saidulajab,Butterfly Park,SaiyadUl Ajaib
-                                Extension,Sainik Farm,New Delhi,Delhi-110030</div>
+        <div class="container-fluid fixed-top"
+            style="background: rgba(167, 0, 0, 0.742); backdrop-filter: blur(10px); box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.538); ">
+            <div class="row">
+                <div class="col-md-2 p-3"> <a href="./index.html">
+                        <img src="./images/logo.png" class="img-fluid" style="object-fit: contain; height: 80px;"
+                            alt="">
+                    </a>
+                    <div style="position: absolute; right: 30px; top: 50%; transform: translate-y(-50%); margin-top: -15px; color: aliceblue;"
+                    id="togleicon"> <i class="fa-solid fa-bars" style="font-size: 30px;" onclick="toggleMenu()"></i>
+                </div>
+                </div>
+                <div class="col-md-6 p-3 justify-content-between flex-column flex-sm-row myMenu" id="showmenu">
+
+
+                    <a href="./index.html">
+                        <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
+                            class="d-flex align-items-center justify-content-between">Home</div>
+                    </a>
+                    <a href="./contact.html">
+                        <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
+                            class="d-flex align-items-center justify-content-between">Contact Us</div>
+                    </a>
+                    <a href="./aboutus.html">
+                        <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
+                            class="d-flex align-items-center justify-content-between">About Us</div>
+                    </a>
+                    <a href="./mortgagecalc.html">
+                        <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
+                            class="d-flex align-items-center justify-content-between">Mortgage Calculator</div>
+                    </a>
+
+
+
+
+
+                    <div class="dropdown" onclick="myFunction()" style="border-radius: 12px;">
+                        <button class="dropbtn h-100 text-white" id="More"
+                            style="background: rgba(255, 255, 255, 0); border-radius: 12px; padding: 10px;">More
+                            <i class="fa-solid fa-chevron-down"></i></button>
+                        <div id="myDropdown" class="dropdown-content rounded">
+                            <a style="color:rgb(255, 255, 255);font-weight:bold;"
+                                href="./locations/delhi.html">Delhi</a>
+                            <a style="color:white;font-weight:bold;" href="./locations/gurgaon.html">Gurgaon</a>
+                            <a style="color:white;font-weight:bold;" href="./locations/noida.html">Noida</a>
                         </div>
+                    </div>
+
+
+                </div>
+                <div class="myMenu1 col-md-4  align-items-start align-items-sm-center justify-content-center flex-sm-row flex-column p-2"
+                    style="gap:10px">
+                    <div style="border-radius: 12px; padding:10px; background: #22577A; color: aliceblue; cursor: pointer; transition: all .3s linear; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);"
+                        class="d-flex align-items-center justify-content-between flex-row flex-sm-column w-100">
+                        <i class="fa-solid fa-phone p-2 rounded-circle"
+                            style="font-size: 25px; margin-left: 15px;"></i><br>
+                        <span class="phonenumber">9878768921</span>
+                        <span class="phonenumber">9878757689</span>
+                    </div>
+
+
+                    <div style="border-radius: 12px; padding:10px; background: #22577A; color: aliceblue; cursor: pointer; transition: all .3s linear; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);"
+                        class="d-flex align-items-center justify-content-evenly">
+                        627, F/F, Westend Marg, Saidulajab, Butterfly Park, Saiyad Ul Ajaib Extension, Sainik Farm, New
+                        Delhi, Delhi-110030
 
                     </div>
                 </div>
+                
             </div>
-        </nav>
+        </div>
         <div id="nav-xs" class="container-fluid fixed-top"
             style="background-color: black; color: white; font-size: 8px;">
             <div class="row">
@@ -445,6 +524,23 @@ toggle between hiding and showing the dropdown content */
             } else {
                 y.style.display = "block"
             }
+        }
+    </script>
+    <script>
+        function toggleMenu() {
+            var element = document.getElementById("showmenu");
+            var element1 = document.querySelector(".myMenu1");
+            console.log(element1)
+
+            if (element.style.display === "none") {
+                element.style.display = "flex";
+                element1.style.display = "flex";
+            } else {
+                element.style.display = "none";
+                element1.style.display = "none";
+            }
+
+            
         }
     </script>
 

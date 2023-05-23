@@ -298,13 +298,36 @@ header.page-header nav.navbar.navbar-light .navbar-brand .logo-img {
 #mortgage-footer {
   margin-top: 100px;
 }
+#togleicon{
+    display: none;
+}
+#showmenu{
+  display: flex;
+}
 
-@media only screen and (max-width: 420px) {
+
+@media only screen and (max-width: 768px) {
+  #togleicon{
+    display: flex;
+  }
+  #showmenu{
+    display: none;
+  }
+
+  #More{
+    margin-left: 130px;
+  }
+  /* .myMenu{
+    display: none ;
+  }
+  .myMenu1{
+    display: none !important;
+  } */
   #nav-md {
     display: none;
   }
   #nav-xs {
-    display: block;
+    display: none;
   }
 
   #aboutus-main {
