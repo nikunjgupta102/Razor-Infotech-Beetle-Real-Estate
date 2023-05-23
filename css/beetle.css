@@ -298,24 +298,29 @@ header.page-header nav.navbar.navbar-light .navbar-brand .logo-img {
 #mortgage-footer {
   margin-top: 100px;
 }
-#togleicon{
-    display: none;
+#togleicon {
+  display: none;
 }
-#showmenu{
+#showmenu {
   display: flex;
 }
 
-
 @media only screen and (max-width: 768px) {
-  #togleicon{
+  #togleicon {
     display: flex;
   }
-  #showmenu{
+  #showmenu {
     display: none;
   }
 
-  #More{
-    margin-left: 130px;
+  #More {
+    margin-left: 145px;
+  }
+
+  #myDropdown {
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
   /* .myMenu{
     display: none ;

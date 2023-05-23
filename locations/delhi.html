@@ -124,32 +124,42 @@
             cursor: pointer;
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);
         }
-        .myMenu1{
+
+        .myMenu1 {
             display: flex;
         }
-        @media screen and (max-width:786px){
-            .myMenu>a{
+
+
+
+        a:hover {
+
+            text-decoration: none !important;
+
+        }
+
+        @media screen and (max-width:786px) {
+            .myMenu>a {
                 margin-bottom: 10px !important;
                 border-radius: 12px;
                 background-color: #22577a93;
             }
-            .myMenu1{
-            display: none;
-        }
-        .phonenumber{
-            margin: 0 20px;
-            padding: 8px 12px;
-            border-radius: 12px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.341);
-            background-color: rgba(220, 20, 60, 0.685);
-        }
+
+            .myMenu1 {
+                display: none;
+            }
+
+            .phonenumber {
+                margin: 0 20px;
+                padding: 8px 12px;
+                border-radius: 12px;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.341);
+                background-color: rgba(220, 20, 60, 0.685);
+            }
         }
     </style>
 </head>
 
-<body data-container="body" data-mage-init="{" loaderAjax": {}, "loader" : { "icon"
-    : "https: fsbo.com static version1603986685 frontend Innismaggiore Fsbo en_US images loader-2.gif" }}"
-    class="cms-home cms-index-index page-layout-home_page">
+<body data-container="body" class="cms-home cms-index-index page-layout-home_page">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4ZGTN8" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -203,17 +213,18 @@
                             alt="">
                     </a>
                     <div style="position: absolute; right: 30px; top: 50%; transform: translate-y(-50%); margin-top: -15px; color: aliceblue;"
-                    id="togleicon"> <i class="fa-solid fa-bars" style="font-size: 30px;" onclick="toggleMenu()"></i>
+                        id="togleicon"> <i class="fa-solid fa-bars" style="font-size: 30px;" onclick="toggleMenu()"></i>
+                    </div>
                 </div>
-                </div>
-                <div class="col-md-6 p-3 justify-content-between flex-column flex-sm-row myMenu" id="showmenu">
+                <div class="col-md-6 p-3 justify-content-between flex-column flex-sm-row myMenu" id="showmenu"
+                    style="font-weight: bolder;">
 
 
-                    <a href="../index.html">
+                    <a href="../index.html" style="text-decoration:none !important">
                         <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
                             class="d-flex align-items-center justify-content-between">Home</div>
                     </a>
-                    <a href="../contact.html">
+                    <a href="../contact.html" style="text-decoration:none">
                         <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
                             class="d-flex align-items-center justify-content-between">Contact Us</div>
                     </a>
@@ -221,7 +232,7 @@
                         <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
                             class="d-flex align-items-center justify-content-between">About Us</div>
                     </a>
-                    <a href="../mortgagecalc.html">
+                    <a href="../mortgagecalc.html" text-decoration:none>
                         <div style="text-decoration: none; color: rgb(255, 255, 255); font-size: 12px; font-weight: bolder; border-radius: 12px; padding:10px"
                             class="d-flex align-items-center justify-content-between">Mortgage Calculator</div>
                     </a>
@@ -233,12 +244,14 @@
                     <div class="dropdown" onclick="myFunction()" style="border-radius: 12px;">
                         <button class="dropbtn h-100 text-white" id="More"
                             style="background: rgba(255, 255, 255, 0); border-radius: 12px; padding: 10px;">More
-                            <i class="fa-solid fa-chevron-down"></i></button>
+                            &darr;</button>
                         <div id="myDropdown" class="dropdown-content rounded">
-                            <a style="color:rgb(255, 255, 255);font-weight:bold;"
+                            <a style="color:rgb(255, 255, 255);font-weight:bold; text-decoration:none"
                                 href="../locations/delhi.html">Delhi</a>
-                            <a style="color:white;font-weight:bold;" href="../locations/gurgaon.html">Gurgaon</a>
-                            <a style="color:white;font-weight:bold;" href="../locations/noida.html">Noida</a>
+                            <a style="color:white;font-weight:bold; text-decoration:none"
+                                href="../locations/gurgaon.html">Gurgaon</a>
+                            <a style="color:white;font-weight:bold; text-decoration:none"
+                                href="../locations/noida.html">Noida</a>
                         </div>
                     </div>
 
@@ -247,22 +260,23 @@
                 <div class="myMenu1 col-md-4  align-items-start align-items-sm-center justify-content-center flex-sm-row flex-column p-2"
                     style="gap:10px">
                     <div style="border-radius: 12px; padding:10px; background: #22577A; color: aliceblue; cursor: pointer; transition: all .3s linear; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);"
-                        class="d-flex align-items-center justify-content-between flex-row flex-sm-column w-100">
-                        <i class="fa-solid fa-phone p-2 rounded-circle"
-                            style="font-size: 25px; margin-left: 15px;"></i><br>
-                        <span class="phonenumber">9878768921</span>
-                        <span class="phonenumber">9878757689</span>
+                        class="d-flex align-items-center justify-content-center flex-row flex-sm-column w-100">
+
+                        <span class="phonenumber p-2"><i
+                                class="fa-solid fa-phone p-1 rounded-circle"></i>1145034631</span>
+                        <span class="phonenumber p-2"><i
+                                class="fa-solid fa-phone p-1 rounded-circle"></i>8822222212</span>
                     </div>
 
 
                     <div style="border-radius: 12px; padding:10px; background: #22577A; color: aliceblue; cursor: pointer; transition: all .3s linear; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.497);"
-                        class="d-flex align-items-center justify-content-evenly">
+                        class="d-flex align-items-center justify-content-evenly ">
                         627, F/F, Westend Marg, Saidulajab, Butterfly Park, Saiyad Ul Ajaib Extension, Sainik Farm, New
                         Delhi, Delhi-110030
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div id="nav-xs" class="container-fluid fixed-top"
@@ -490,15 +504,15 @@ toggle between hiding and showing the dropdown content */
             var element1 = document.querySelector(".myMenu1");
             console.log(element1)
 
-            if (element.style.display === "none") {
-                element.style.display = "flex";
-                element1.style.display = "flex";
-            } else {
+            if (element.style.display === "flex") {
                 element.style.display = "none";
                 element1.style.display = "none";
+            } else {
+                element.style.display = "flex";
+                element1.style.display = "flex";
             }
 
-            
+
         }
     </script>
 
