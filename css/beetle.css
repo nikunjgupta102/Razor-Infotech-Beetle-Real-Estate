@@ -313,6 +313,10 @@ header.page-header nav.navbar.navbar-light .navbar-brand .logo-img {
   #showmenu{
     display: none;
   }
+
+  #More{
+    margin-left: 130px;
+  }
   /* .myMenu{
     display: none ;
   }
